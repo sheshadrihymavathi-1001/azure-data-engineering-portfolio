@@ -1,140 +1,184 @@
-# 🚀 GenAI + Azure Data Engineering — 90 Day Learning Journey
+# Azure Data Engineering Portfolio
 
-Welcome to my **90-day learning journey to become proficient in GenAI-based Azure Data Engineering**.
+A hands-on portfolio documenting my transition into **Azure Data Engineering**, with an emphasis on production-style data platforms, distributed processing, reliability, performance, and modern cloud architecture.
 
-I'm documenting my learning publicly as I explore how Generative AI connects with modern Data Engineering and enterprise data platforms.
+The repository combines:
 
-This repository contains my:
-
-- 📚 Daily learning notes
-- 🧠 Mental models
-- 🏗️ Architecture diagrams
-- 💻 Hands-on exercises
-- 🔬 Experiments
-- ☁️ Azure implementations
-- 🧱 Databricks examples
-- 🤖 GenAI concepts
-- 🚀 Projects and capstone work
-
----
-
-# 🎯 Why This Journey?
-
-I've been working with Data Engineering concepts such as:
-
-- SQL
-- Data pipelines
-- Azure
-- Databricks
-- Spark
-- Data transformation
-- Data platforms
-
-The next step is understanding how **Generative AI can work with enterprise data**.
-
-Rather than learning GenAI as a collection of tools, I'm taking a problem-solving approach:
-
-> **Business problem → Limitation → Solution → New problem → Next solution**
-
-The goal is to understand **why a technology exists before learning how to implement it**.
+- Enterprise Data Engineering projects
+- Azure architecture and implementation patterns
+- SQL and PySpark problem solving
+- Databricks and Spark internals
+- Incremental loading and CDC
+- Streaming data pipelines
+- Metadata-driven frameworks
+- Data quality and validation
+- Failure recovery and idempotency
+- Spark performance engineering
+- Selected GenAI learning and experiments
 
 ---
 
-# 🧠 My Learning Philosophy
+# Career Transition Focus
 
-I don't want to simply memorize:
+The primary objective of this portfolio is to demonstrate practical Data Engineering capability through realistic enterprise scenarios rather than isolated tutorials.
 
-> RAG = Retrieval-Augmented Generation
-
-I want to understand:
+The engineering approach used throughout the projects is:
 
 ```text
-LLM doesn't know private enterprise data
-                ↓
-Need relevant enterprise information
-                ↓
-Retrieve that information
-                ↓
-Provide it to the LLM
-                ↓
-RAG
+Business Problem
+      ↓
+Data / System Constraint
+      ↓
+Architecture Decision
+      ↓
+Implementation
+      ↓
+Failure / Edge Case
+      ↓
+Recovery Strategy
+      ↓
+Validation & Performance
 ```
 
-Similarly:
+The goal is to demonstrate not only **how** a technology works, but also **why** a particular design is appropriate and what happens when the system fails.
+
+---
+
+# Projects
+
+## Project 01 — Enterprise Retail Data Platform
+
+A production-style retail data platform designed around a simulated enterprise OLTP source.
+
+Key areas:
+
+- SQL Server source system
+- Large-scale synthetic data generation
+- Incremental loading
+- Composite watermarks
+- CDC
+- Idempotent processing
+- Delta-oriented data architecture
+- Data quality validation
+- Audit and control tables
+- Failure simulation and restartability
+- Spark performance engineering
+
+Project location:
+
+```text
+projects/project-01-enterprise-retail-data-platform/
 ```
-LLM needs information from a database
-                ↓
-Database requires an operation
-                ↓
-Expose database capability as a tool
-                ↓
-Tool Calling
+
+---
+
+## Project 02 — Real-Time E-Commerce Analytics Platform
+
+Planned streaming project covering:
+
+- Event-driven architecture
+- Azure Event Hubs
+- Databricks Structured Streaming
+- Late-arriving events
+- Streaming checkpoints
+- Deduplication
+- Window aggregations
+- Bronze / Silver / Gold processing
+- Streaming failure recovery
+
+Project location:
+
+```text
+projects/project-02-real-time-ecommerce-platform/
 ```
 
-And:
+---
 
+## Project 03 — Enterprise Metadata-Driven Data Platform
+
+Planned reusable ingestion framework covering:
+
+- Metadata-driven ingestion
+- Parameterized pipelines
+- Dynamic source and target configuration
+- Full and incremental loading
+- Watermark management
+- Data quality rules
+- Audit logging
+- Retry and error handling
+- Idempotent replay
+
+Project location:
+
+```text
+projects/project-03-metadata-driven-data-platform/
 ```
-Task requires multiple actions
-                ↓
-Multiple tools are required
-                ↓
-Need orchestration
-                ↓
-Agents
-```
 
-This reasoning-first approach will be used throughout the 90 days.
+---
 
-📅 90-Day Roadmap
+# Technology Areas
 
-| Day | Topic                                   | Status |
-| --- | --------------------------------------- | ------ |
-| 01  | GenAI Foundations                       | ✅      |
-| 02  | How LLMs Work                           | 🔜     |
-| 03  | Tokens, Tokenization & Context          | ⏳      |
-| 04  | Embeddings & Semantic Representation    | ⏳      |
-| 05  | Prompt Engineering & Structured Outputs | ⏳      |
-| 06  | LLM APIs                                | ⏳      |
-| 07  | Azure OpenAI / Azure AI                 | ⏳      |
-| 08  | Enterprise GenAI Architecture           | ⏳      |
-| 09  | RAG Fundamentals                        | ⏳      |
-| 10  | Document Processing                     | ⏳      |
-| 11  | Chunking Strategies                     | ⏳      |
-| 12  | Embeddings in RAG                       | ⏳      |
-| 13  | Vector Search                           | ⏳      |
-| 14  | Building a Basic RAG Pipeline           | ⏳      |
-| ... | ...                                     | ⏳      |
-| 90  | Capstone + Interview Preparation        | ⏳      |
+| Area | Technologies / Concepts |
+|---|---|
+| SQL | SQL Server, joins, aggregations, analytical SQL |
+| Programming | Python, PySpark |
+| Orchestration | Azure Data Factory |
+| Storage | ADLS Gen2, Parquet, Delta Lake |
+| Processing | Apache Spark, Databricks |
+| Data Movement | Incremental loading, CDC, watermarks |
+| Reliability | Idempotency, checkpoints, retries, recovery |
+| Streaming | Event Hubs, Structured Streaming |
+| Governance | Metadata, audit, data quality |
+| Performance | Partitioning, shuffle, skew, broadcast, Spark UI |
+| Analytics | Gold-layer modeling, Power BI |
+| GenAI | RAG, embeddings, tool calling, agents |
 
-The roadmap will evolve as I progress through the journey.
+---
 
-📂 Repository Structure
+# Repository Structure
 
-```
-genai-azure-data-engineering-90-days/
+```text
+azure-data-engineering-portfolio/
 │
 ├── README.md
 │
-├── Day-01/
-│   ├── README.md
-│   └── mental-model.md
-│
-├── Day-02/
-│   └── README.md
-│
-├── Day-03/
-│   └── README.md
-│
-├── ...
-│
 ├── projects/
-│   ├── project-01/
-│   ├── project-02/
-│   └── capstone/
+│   ├── project-01-enterprise-retail-data-platform/
+│   ├── project-02-real-time-ecommerce-platform/
+│   └── project-03-metadata-driven-data-platform/
+│
+├── Day-01/ ...
+├── Day-02/ ...
+├── ...
 │
 └── resources/
     ├── architecture/
     ├── diagrams/
     └── references/
-
 ```
+
+The existing learning notes and GenAI material remain part of the broader learning journey, while the `projects/` directory is the primary portfolio section for Data Engineering work.
+
+---
+
+# Engineering Philosophy
+
+I focus on understanding systems through failure modes and trade-offs:
+
+```text
+What problem are we solving?
+        ↓
+Why does the problem exist?
+        ↓
+What happens at scale?
+        ↓
+Where can the pipeline fail?
+        ↓
+How do we make processing idempotent?
+        ↓
+How do we recover safely?
+        ↓
+How do we prove the result is correct?
+```
+
+This repository is therefore intended to show **engineering reasoning, implementation, testing, and operational thinking** rather than only completed code.
