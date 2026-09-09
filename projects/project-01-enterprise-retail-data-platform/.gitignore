@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.log
+*.bak
+*.tmp
+local_config.py
+secrets/
+output/
+data/
+*.csv
+*.parquet
+*.json
